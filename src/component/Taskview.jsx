@@ -15,7 +15,7 @@ function Taskview(){
         {todolist.length>0 && todolist.map((e)=>{
             c++;
       return <div key={e.id}>
-      {!e.checked?<h5>{c}.) {e.title} </h5>:<s><h5>{c}.) {e.title} </h5></s>} 
+      {!e.checked?<h5>{c}.) {e.title} </h5>:<s className="" style={{color:"grey"}}><i><h5>{c}.) {e.title} </h5> </i></s>} 
       Completed <input type="checkbox" checked={e.checked} onClick={()=>{dispatch(check([e.id,!e.checked]))}} ></input>
       <button onClick={()=>deletetodo(e)} className="btn btn-danger w-4 m-2 ">remove</button>
       </div>
